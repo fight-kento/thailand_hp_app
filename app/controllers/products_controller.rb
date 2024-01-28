@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
   def confirm
     puts "------"
     puts "confirm"
+    puts params
     puts "------"
     # @products = Product.all
 
@@ -28,7 +29,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :email, :date, :address)
+    params.require(:product).permit(:name, :email, :date, :address, :choices[])
   end
   
 end
